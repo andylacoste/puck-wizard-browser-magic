@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Chrome, ArrowRight } from "lucide-react";
 import heroImage from "@/assets/hero-hockey.jpg";
+import logo from "@/assets/puck-wizard-logo.png";
 
 export const Hero = () => {
   return (
@@ -18,10 +19,13 @@ export const Hero = () => {
       {/* Content */}
       <div className="container relative z-10 px-4 py-20 md:py-32">
         <div className="max-w-4xl mx-auto text-center animate-fade-in">
-          {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-8">
-            <Chrome className="w-4 h-4 text-primary" />
-            <span className="text-sm font-medium text-foreground">Browser Extension for NHL Fans</span>
+          {/* Logo & Badge */}
+          <div className="flex flex-col items-center gap-4 mb-8">
+            <img src={logo} alt="Puck Wizard" className="w-24 h-24 md:w-32 md:h-32 animate-fade-in" />
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20">
+              <Chrome className="w-4 h-4 text-primary" />
+              <span className="text-sm font-medium text-foreground">Browser Extension for NHL Fans</span>
+            </div>
           </div>
           
           {/* Headline */}

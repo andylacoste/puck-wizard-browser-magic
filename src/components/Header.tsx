@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Chrome } from "lucide-react";
+import logo from "@/assets/puck-wizard-logo.png";
 
 export const Header = () => {
   return (
@@ -8,9 +9,7 @@ export const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-lg bg-gradient-accent flex items-center justify-center">
-              <Chrome className="w-5 h-5 text-background" />
-            </div>
+            <img src={logo} alt="Puck Wizard" className="w-10 h-10" />
             <span className="text-xl font-bold text-foreground">Puck Wizard</span>
           </div>
           

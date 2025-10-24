@@ -1,4 +1,5 @@
 import { Chrome } from "lucide-react";
+import logo from "@/assets/puck-wizard-logo.png";
 
 export const Footer = () => {
   return (
@@ -8,9 +9,7 @@ export const Footer = () => {
           {/* Brand */}
           <div className="md:col-span-2">
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 rounded-lg bg-gradient-accent flex items-center justify-center">
-                <Chrome className="w-5 h-5 text-background" />
-              </div>
+              <img src={logo} alt="Puck Wizard" className="w-10 h-10" />
               <span className="text-xl font-bold text-foreground">Puck Wizard</span>
             </div>
             <p className="text-sm text-muted-foreground max-w-md">
