@@ -9,7 +9,7 @@ const steps = [
   {
     icon: Sparkles,
     title: "Browse as Usual",
-    description: "Visit your favorite hockey sites—ESPN, NHL.com, fantasy platforms—just like always."
+    description: "Visit your fantasy hockey sites, including Fantrax, Yahoo, and ESPN—just like always."
   },
   {
     icon: Trophy,
@@ -28,7 +28,7 @@ export const HowItWorks = () => {
             Get Started in 3 Simple Steps
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            No accounts, no configuration, no hassle. Just install and dominate.
+            No separate sites, no configuration, no hassle. Just install and dominate.
           </p>
         </div>
         

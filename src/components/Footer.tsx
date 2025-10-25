@@ -13,7 +13,7 @@ export const Footer = () => {
               <span className="text-xl font-bold text-foreground">Puck Wizard</span>
             </div>
             <p className="text-sm text-muted-foreground max-w-md">
-              The smart browser extension for passionate hockey fans and fantasy managers. Get real-time NHL data without leaving your favorite sites.
+              The smart browser extension for passionate fantasy hockey managers. Get real-time NHL data without leaving your favorite sites.
             </p>
           </div>
           

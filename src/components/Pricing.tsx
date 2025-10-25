@@ -10,8 +10,9 @@ const freeTier = {
   description: "Perfect for casual fans",
   features: [
     "Live NHL line combinations",
-    "Basic lineup updates",
-    "Works on all hockey sites",
+    "Forward lines and defensive pairings",
+    "Power-play combinations",
+    "Works on the top fantasy hockey sites",
   ],
   cta: "Get Started Free",
   variant: "outline" as const,
@@ -21,7 +22,7 @@ const freeTier = {
 const premiumTier = {
   name: "Premium",
   icon: Crown,
-  price: "$4.99",
+  price: "$1.99",
   period: "per month",
   description: "For serious fantasy managers",
   features: [
@@ -31,7 +32,6 @@ const premiumTier = {
     "Recent line movement tracking",
     "Opposition trend analysis",
     "Advanced matchup insights",
-    "Power-play & special teams data",
     "Historical performance metrics",
     "Priority data updates",
   ],
@@ -134,7 +134,7 @@ export const Pricing = () => {
 
         {/* Bottom Note */}
         <p className="text-center text-sm text-muted-foreground mt-8">
-          All plans include unlimited usage • Cancel anytime • 14-day money-back guarantee
+          All plans include unlimited usage • Cancel anytime
         </p>
       </div>
     </section>

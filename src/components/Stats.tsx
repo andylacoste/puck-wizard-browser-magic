@@ -1,7 +1,7 @@
 const stats = [
-  { value: "10,000+", label: "Active Users" },
-  { value: "1M+", label: "Data Points Daily" },
-  { value: "< 0.1s", label: "Load Time" },
+  { value: "1,000+", label: "Active Users" },
+  { value: "1000's+", label: "Data Points Daily" },
+  { value: "< 1s", label: "Load Time" },
   { value: "100%", label: "Free Forever" }
 ];
 
