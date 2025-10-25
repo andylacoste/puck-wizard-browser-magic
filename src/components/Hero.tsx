@@ -24,18 +24,18 @@ export const Hero = () => {
             <img src={logo} alt="Puck Wizard" className="w-24 h-24 md:w-32 md:h-32 animate-fade-in" />
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20">
               <Chrome className="w-4 h-4 text-primary" />
-              <span className="text-sm font-medium text-foreground">Browser Extension for NHL Fans</span>
+              <span className="text-sm font-medium text-foreground">Browser Extension for Fantasy Hockey Pros</span>
             </div>
           </div>
           
           {/* Headline */}
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text text-transparent leading-tight">
-            Your Edge in NHL Fantasy & Analytics
+            Your Edge in Fantasy Hockey
           </h1>
           
           {/* Subheadline */}
           <p className="text-xl md:text-2xl text-muted-foreground mb-10 max-w-3xl mx-auto leading-relaxed">
-            Instantly view live line combinations, player trends, and opposition data—all without leaving your favorite hockey sites.
+            Instantly view live line combinations, player trends, and opposition data—all without leaving your favorite fantasy hockey sites.
           </p>
           
           {/* CTA Buttons */}
@@ -51,7 +51,7 @@ export const Hero = () => {
           
           {/* Trust Badge */}
           <p className="text-sm text-muted-foreground mt-8">
-            Trusted by 10,000+ fantasy managers • Free forever
+            Trusted by 1,000+ fantasy managers • Free forever
           </p>
         </div>
       </div>
