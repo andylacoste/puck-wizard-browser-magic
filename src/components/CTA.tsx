@@ -1,7 +1,46 @@
 import { Button } from "@/components/ui/button";
 import { Chrome, ArrowRight } from "lucide-react";
 
+const detectBrowser = () => {
+  // Check for Firefox
+  if (typeof navigator !== 'undefined') {
+    const userAgent = navigator.userAgent.toLowerCase();
+    if (userAgent.includes('firefox')) {
+      return 'firefox';
+    }
+    // Check for Chrome/Chromium (but not Edge)
+    if (userAgent.includes('chrome') && !userAgent.includes('edg')) {
+      return 'chrome';
+    }
+    // Check for Safari
+    if (userAgent.includes('safari') && !userAgent.includes('chrome')) {
+      return 'safari';
+    }
+    // Check for Edge
+    if (userAgent.includes('edg')) {
+      return 'edge';
+    }
+  }
+  return 'chrome'; // Default to Chrome
+};
+
+const getDownloadUrl = (browser: string) => {
+  const urls = {
+    chrome: 'https://chrome.google.com/webstore/category/extensions', // Replace with your Chrome Web Store URL
+    firefox: 'https://addons.mozilla.org/en-US/firefox/', // Replace with your Firefox Add-on URL
+    safari: '#', // Coming soon
+    edge: 'https://microsoftedge.microsoft.com/addons/Microsoft-Edge-Extensions-Home', // Replace with your Edge Add-on URL
+  };
+  return urls[browser as keyof typeof urls] || urls.chrome;
+};
+
 export const CTA = () => {
+  const browser = detectBrowser();
+  
+  const handleDownloadClick = () => {
+    window.open(getDownloadUrl(browser), '_blank');
+  };
+
   return (
     <section className="py-24 relative">
       <div className="container px-4">
@@ -27,7 +66,7 @@ export const CTA = () => {
               </p>
               
               <div className="flex flex-col gap-4">
-                <Button variant="hero" size="xl" className="group">
+                <Button variant="hero" size="xl" className="group" onClick={handleDownloadClick}>
                   Get Puck Wizard Free
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Button>

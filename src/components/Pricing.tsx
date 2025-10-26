@@ -35,7 +35,7 @@ const premiumTier = {
     "Historical performance metrics",
     "Priority data updates",
   ],
-  cta: "Upgrade to Premium",
+  cta: "Coming Soon",
   variant: "hero" as const,
   popular: true,
 };
@@ -126,7 +126,7 @@ export const Pricing = () => {
               ))}
             </ul>
 
-            <Button variant={premiumTier.variant} size="lg" className="w-full">
+            <Button variant={premiumTier.variant} size="lg" className="w-full" disabled>
               {premiumTier.cta}
             </Button>
           </Card>
