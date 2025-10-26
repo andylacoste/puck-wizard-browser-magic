@@ -29,7 +29,7 @@ export const Header = () => {
           {/* CTA */}
           <Button variant="hero" size="default">
             <Chrome className="w-4 h-4" />
-            Add to Chrome
+            Add to Your Browser
           </Button>
         </div>
       </div>

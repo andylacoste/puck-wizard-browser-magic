@@ -26,14 +26,22 @@ export const CTA = () => {
                 Join thousands of fantasy managers using Puck Wizard to stay ahead of the competition.
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <div className="flex flex-col gap-4">
                 <Button variant="hero" size="xl" className="group">
                   Get Puck Wizard Free
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
-                <Button variant="outline" size="xl">
-                  View on Chrome Store
-                </Button>
+                <div className="flex flex-wrap gap-3 justify-center">
+                  <Button variant="outline" size="lg">
+                    Chrome
+                  </Button>
+                  <Button variant="outline" size="lg">
+                    Firefox
+                  </Button>
+                  <Button variant="outline" size="lg" disabled>
+                    Safari (Coming Soon)
+                  </Button>
+                </div>
               </div>
               
               <p className="text-sm text-muted-foreground mt-6">

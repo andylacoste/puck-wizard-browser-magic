@@ -24,7 +24,7 @@ export const Hero = () => {
             <img src={logo} alt="Puck Wizard" className="w-24 h-24 md:w-32 md:h-32 animate-fade-in" />
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20">
               <Chrome className="w-4 h-4 text-primary" />
-              <span className="text-sm font-medium text-foreground">Browser Extension for Fantasy Hockey Pros</span>
+              <span className="text-sm font-medium text-foreground">Browser Extension for Fantasy Hockey Pros - Works on Chrome, Firefox & More</span>
             </div>
           </div>
           
@@ -41,11 +41,8 @@ export const Hero = () => {
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button variant="hero" size="xl" className="group">
-              Add to Chrome - It's Free
+              Add to Your Browser - It's Free
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
-            <Button variant="outline" size="xl">
-              Watch Demo
             </Button>
           </div>
           

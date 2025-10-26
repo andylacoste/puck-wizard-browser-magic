@@ -4,7 +4,7 @@ const steps = [
   {
     icon: Chrome,
     title: "Install the Extension",
-    description: "Add Puck Wizard to Chrome in seconds. One click, zero setup required."
+    description: "Add Puck Wizard to your browser in seconds. One click, zero setup required."
   },
   {
     icon: Sparkles,
