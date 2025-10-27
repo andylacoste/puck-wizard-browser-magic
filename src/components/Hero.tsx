@@ -3,7 +3,34 @@ import { Chrome, ArrowRight } from "lucide-react";
 import heroImage from "@/assets/hero-hockey.jpg";
 import logo from "@/assets/puck-wizard-logo.png";
 
+const detectBrowser = () => {
+  if (typeof navigator !== 'undefined') {
+    const userAgent = navigator.userAgent.toLowerCase();
+    if (userAgent.includes('firefox')) return 'firefox';
+    if (userAgent.includes('chrome') && !userAgent.includes('edg')) return 'chrome';
+    if (userAgent.includes('safari') && !userAgent.includes('chrome')) return 'safari';
+    if (userAgent.includes('edg')) return 'edge';
+  }
+  return 'chrome';
+};
+
+const getDownloadUrl = (browser: string) => {
+  const urls: { [key: string]: string } = {
+    chrome: 'https://chrome.google.com/webstore/category/extensions',
+    firefox: 'https://addons.mozilla.org/en-US/firefox/',
+    safari: '#',
+    edge: 'https://microsoftedge.microsoft.com/addons/Microsoft-Edge-Extensions-Home',
+  };
+  return urls[browser] || urls.chrome;
+};
+
 export const Hero = () => {
+  const browser = detectBrowser();
+  
+  const handleDownloadClick = () => {
+    window.open(getDownloadUrl(browser), '_blank');
+  };
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image with Overlay */}
@@ -40,7 +67,7 @@ export const Hero = () => {
           
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button variant="hero" size="xl" className="group">
+            <Button variant="hero" size="xl" className="group" onClick={handleDownloadClick}>
               Add to Your Browser - It's Free
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
