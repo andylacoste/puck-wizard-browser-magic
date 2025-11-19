@@ -16,7 +16,7 @@ const detectBrowser = () => {
 const getDownloadUrl = (browser: string) => {
   const urls: { [key: string]: string } = {
     chrome: 'https://chrome.google.com/webstore/category/extensions',
-    firefox: 'https://addons.mozilla.org/en-US/firefox/',
+    firefox: 'https://addons.mozilla.org/en-CA/firefox/addon/puck-wizard/',
     safari: '#',
     edge: 'https://microsoftedge.microsoft.com/addons/Microsoft-Edge-Extensions-Home',
   };

@@ -27,7 +27,7 @@ const detectBrowser = () => {
 const getDownloadUrl = (browser: string) => {
   const urls = {
     chrome: 'https://chrome.google.com/webstore/category/extensions', // Replace with your Chrome Web Store URL
-    firefox: 'https://addons.mozilla.org/en-US/firefox/', // Replace with your Firefox Add-on URL
+    firefox: 'https://addons.mozilla.org/en-CA/firefox/addon/puck-wizard/',
     safari: '#', // Coming soon
     edge: 'https://microsoftedge.microsoft.com/addons/Microsoft-Edge-Extensions-Home', // Replace with your Edge Add-on URL
   };
@@ -74,7 +74,11 @@ export const CTA = () => {
                   <Button variant="outline" size="lg">
                     Chrome
                   </Button>
-                  <Button variant="outline" size="lg">
+                  <Button 
+                    variant="outline" 
+                    size="lg"
+                    onClick={() => window.open('https://addons.mozilla.org/en-CA/firefox/addon/puck-wizard/', '_blank')}
+                  >
                     Firefox
                   </Button>
                   <Button variant="outline" size="lg" disabled>
