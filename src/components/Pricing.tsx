@@ -2,6 +2,39 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Check, Zap, Crown } from "lucide-react";
 
+const detectBrowser = () => {
+  // Check for Firefox
+  if (typeof navigator !== 'undefined') {
+    const userAgent = navigator.userAgent.toLowerCase();
+    if (userAgent.includes('firefox')) {
+      return 'firefox';
+    }
+    // Check for Chrome/Chromium (but not Edge)
+    if (userAgent.includes('chrome') && !userAgent.includes('edg')) {
+      return 'chrome';
+    }
+    // Check for Safari
+    if (userAgent.includes('safari') && !userAgent.includes('chrome')) {
+      return 'safari';
+    }
+    // Check for Edge
+    if (userAgent.includes('edg')) {
+      return 'edge';
+    }
+  }
+  return 'chrome'; // Default to Chrome
+};
+
+const getDownloadUrl = (browser: string) => {
+  const urls = {
+    chrome: 'https://chrome.google.com/webstore/category/extensions', // Replace with your Chrome Web Store URL
+    firefox: 'https://addons.mozilla.org/en-CA/firefox/addon/puck-wizard/',
+    safari: '#', // Coming soon
+    edge: 'https://microsoftedge.microsoft.com/addons/Microsoft-Edge-Extensions-Home', // Replace with your Edge Add-on URL
+  };
+  return urls[browser as keyof typeof urls] || urls.chrome;
+};
+
 const freeTier = {
   name: "Free",
   icon: Zap,
@@ -35,12 +68,23 @@ const premiumTier = {
     "Historical performance metrics",
     "Priority data updates",
   ],
-  cta: "Coming Soon",
+  cta: "Upgrade in Extension",
   variant: "hero" as const,
   popular: true,
 };
 
 export const Pricing = () => {
+  const browser = detectBrowser();
+  
+  const handleFreeClick = () => {
+    window.open(getDownloadUrl(browser), '_blank');
+  };
+
+  const handlePremiumClick = () => {
+    // Open ExtensionPay payment page for upgrading within the extension
+    window.open('https://extensionpay.com/extension/puck-wizard/choose-plan', '_blank');
+  };
+
   return (
     <section className="py-24 relative bg-gradient-ice">
       <div className="container px-4">
@@ -84,7 +128,7 @@ export const Pricing = () => {
               ))}
             </ul>
 
-            <Button variant={freeTier.variant} size="lg" className="w-full">
+            <Button variant={freeTier.variant} size="lg" className="w-full" onClick={handleFreeClick}>
               {freeTier.cta}
             </Button>
           </Card>
@@ -126,7 +170,7 @@ export const Pricing = () => {
               ))}
             </ul>
 
-            <Button variant={premiumTier.variant} size="lg" className="w-full" disabled>
+            <Button variant={premiumTier.variant} size="lg" className="w-full" onClick={handlePremiumClick}>
               {premiumTier.cta}
             </Button>
           </Card>
