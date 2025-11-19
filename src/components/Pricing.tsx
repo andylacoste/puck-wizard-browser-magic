@@ -81,8 +81,8 @@ export const Pricing = () => {
   };
 
   const handlePremiumClick = () => {
-    // Open ExtensionPay payment page for upgrading within the extension
-    window.open('https://extensionpay.com/extension/puck-wizard/choose-plan', '_blank');
+    // Direct to browser extension download page - users can upgrade within the extension after installing
+    window.open(getDownloadUrl(browser), '_blank');
   };
 
   return (
