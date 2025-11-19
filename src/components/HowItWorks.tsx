@@ -9,7 +9,7 @@ const steps = [
   {
     icon: Sparkles,
     title: "Browse as Usual",
-    description: "Visit your fantasy hockey sites, including Fantrax, Yahoo, and ESPN—just like always."
+    description: "Visit your fantasy hockey site, Fantrax (available now), Yahoo (coming soon), and ESPN (coming soon) — just like always."
   },
   {
     icon: Trophy,

@@ -88,7 +88,7 @@ export const CTA = () => {
               </div>
               
               <p className="text-sm text-muted-foreground mt-6">
-                No credit card required • Works with all major hockey sites • 5-star rated
+                No credit card required • Works on Fantrax, with others available soon • 5-star rated
               </p>
             </div>
           </div>
