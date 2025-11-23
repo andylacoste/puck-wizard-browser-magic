@@ -16,10 +16,10 @@ const detectBrowser = () => {
 
 const getDownloadUrl = (browser: string) => {
   const urls: { [key: string]: string } = {
-    chrome: 'https://chrome.google.com/webstore/category/extensions',
+    chrome: 'https://chromewebstore.google.com/detail/puck-wizard/lbjfhcfoaefpfbpohngjhgfkkhocjadn?pli=1',
     firefox: 'https://addons.mozilla.org/en-CA/firefox/addon/puck-wizard/',
     safari: '#',
-    edge: 'https://microsoftedge.microsoft.com/addons/Microsoft-Edge-Extensions-Home',
+    edge: 'https://chromewebstore.google.com/detail/puck-wizard/lbjfhcfoaefpfbpohngjhgfkkhocjadn?pli=1', // Edge can use Chrome Web Store
   };
   return urls[browser] || urls.chrome;
 };

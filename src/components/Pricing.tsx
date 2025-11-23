@@ -27,10 +27,10 @@ const detectBrowser = () => {
 
 const getDownloadUrl = (browser: string) => {
   const urls = {
-    chrome: 'https://chrome.google.com/webstore/category/extensions', // Replace with your Chrome Web Store URL
+    chrome: 'https://chromewebstore.google.com/detail/puck-wizard/lbjfhcfoaefpfbpohngjhgfkkhocjadn?pli=1',
     firefox: 'https://addons.mozilla.org/en-CA/firefox/addon/puck-wizard/',
     safari: '#', // Coming soon
-    edge: 'https://microsoftedge.microsoft.com/addons/Microsoft-Edge-Extensions-Home', // Replace with your Edge Add-on URL
+    edge: 'https://chromewebstore.google.com/detail/puck-wizard/lbjfhcfoaefpfbpohngjhgfkkhocjadn?pli=1', // Edge can use Chrome Web Store
   };
   return urls[browser as keyof typeof urls] || urls.chrome;
 };
