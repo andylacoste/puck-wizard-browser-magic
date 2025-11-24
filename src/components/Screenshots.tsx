@@ -9,35 +9,39 @@ import {
 } from "@/components/ui/carousel";
 import { Maximize2, X } from "lucide-react";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
+import linesPpFree from "@/assets/lines_pp_free.png";
+import linesPpTooltipFree from "@/assets/lines_pp_tooltip_free.png";
+import hotColdPremium from "@/assets/hot_cold_premium.png";
+import gaGfPremium from "@/assets/ga_gf_premium.png";
 
-// Placeholder for screenshots - replace these with actual screenshot paths
+// Screenshots array with imported images
 const screenshots = [
   {
     id: 1,
     title: "Line Combinations",
     description: "See forward lines, defensive pairings, and power-play units at a glance",
-    image: "src/assets/lines_pp_free.png", // Replace with actual screenshot path
+    image: linesPpFree,
     alt: "Puck Wizard showing line combinations on Fantrax",
   },
   {
     id: 2,
     title: "Line Tooltips",
     description: "One click to see who they are currently playing on a line with for 5 on 5 and the PP",
-    image: "/src/assets/lines_pp_tooltip_free.png", // Replace with actual screenshot path
+    image: linesPpTooltipFree,
     alt: "Player status badges showing OUT indicators",
   },
   {
     id: 3,
     title: "Hot and Cold Players",
     description: "Premium feature showing which players are hot and cold, and who is on the bubble",
-    image: "/src/assets/hot_cold_premium.png", // Replace with actual screenshot path
+    image: hotColdPremium,
     alt: "Power play unit badges displayed next to player names",
   },
   {
     id: 4,
     title: "GA/G and GF/G Rankings",
     description: "Premium feature showing their upcoming oppoents GA/G and GF/G rankings",
-    image: "/src/assets/ga_gf_premium.png", // Replace with actual screenshot path
+    image: gaGfPremium,
     alt: "Back-to-back game indicators for teams",
   },
 ];
