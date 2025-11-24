@@ -40,7 +40,7 @@ const screenshots = [
   {
     id: 4,
     title: "GA/G and GF/G Rankings",
-    description: "Premium feature showing their upcoming oppoents GA/G and GF/G rankings",
+    description: "Premium feature showing their upcoming opponents GA/G and GF/G rankings",
     image: gaGfPremium,
     alt: "Back-to-back game indicators for teams",
   },
