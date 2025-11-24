@@ -42,13 +42,34 @@ export const Header = () => {
           
           {/* Navigation */}
           <nav className="hidden md:flex items-center gap-8">
-            <a href="#features" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
+            <a 
+              href="/features"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+            >
               Features
             </a>
-            <a href="#pricing" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
+            <a 
+              href="/pricing"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+            >
               Pricing
             </a>
-            <a href="#how-it-works" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
+            <a 
+              href="/how-it-works"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+            >
               How It Works
             </a>
           </nav>

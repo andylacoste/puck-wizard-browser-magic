@@ -1,5 +1,4 @@
 const stats = [
-  { value: "1,000+", label: "Active Users" },
   { value: "10K's+", label: "Data Points Daily" },
   { value: "< 1s", label: "Load Time" },
   { value: "100%", label: "Free Forever" }
@@ -10,7 +9,7 @@ export const Stats = () => {
     <section className="py-20 relative">
       <div className="container px-4">
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-center group">
                 <div className="mb-2">

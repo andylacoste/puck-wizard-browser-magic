@@ -75,7 +75,7 @@ export const Hero = () => {
           
           {/* Trust Badge */}
           <p className="text-sm text-muted-foreground mt-8">
-            Trusted by 1,000+ fantasy managers • Free forever
+            Trusted by passionate fantasy hockey managers
           </p>
         </div>
       </div>
